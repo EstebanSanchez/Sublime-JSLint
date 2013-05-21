@@ -1,11 +1,11 @@
 {
 	"cmd": [
-	  "node", 
+	  "/usr/local/bin/node", 
 	  "${packages}/JSLint/linter.js",
 	  // tolerate missing 'use strict' pragma
 	  "--sloppy",
 	  // suggest an indent level of two spaces
-	  "--indent", "2",
+	  //"--indent", "2",
 	  // assume node.js to predefine node globals
 	  "--node",
 	  // tolerate unfiltered for in
@@ -19,6 +19,10 @@
 	  // tolerate Douglas Crockford
 	  "--stupid",
 	  "--todo",
+	  // tolerate 'messy whitespace'
+	  "--white",
+	  // assume console, alert...
+	  "--devel",
 	  "$file"
 	],
 	"file_regex": "^\\/.*\\/([^\\/]*)$",
